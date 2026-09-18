@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-item: center;
+        height: 100vh;
+    }
+    form{
+        border: 1px solid black;
+        padding: 20px
+    }
+    </style>
+</head>
+<body>
+   
+    <forms>
+        <fieldset tittle="student form ">
+         <h3>Sign UP</h3><br>
+        <label>Name:</label><br>
+        <input type="text" maxlength="12" placeholder="enter name"><br>
+        <label>enter email</label><br>
+        <input type="text" required><br>
+        <label>Birth Date</label><br>
+        <input type="date"><br>
+        <label> user name</label><br>
+        <input type="text" placeholder="user name"><br>
+        <label>password</label><br>
+        <input type="password" placeholder="enter paasword"><br>
+        <label>confirm password</label><br>
+        <input type="password"><br>
+        <textarea></textarea><br>
+      <button type="submit" align-item="centre">SUBMIT</button><br>
+      <input type="checkbox">
+      <label>gender</label><br>
+      <input type="radio" name="gender">female
+      <input type="radio" name="gender">male
+      <input type="radio" name="gender">others<br>
+      <label>skills:</label>
+      <select>
+        <options>select your skill</options>
+        <options>html</options>
+        <options>js</options>
+        <option>css</option>
+        <optgroup label="frontend">
+             <options>html</options>
+        <options>js</options>
+        <option>css</option>
+        </optgroup>
+        <optgroup label="backend">
+            <options>node js</options>
+            <options>java</options>
+            <option>spring</option>
+        </optgroup>
+      </select><br>
+      <label>Resume:</label>
+      <input type="file"><br>
+      <label>Comment</label>
+      <textarea rows="" cols=""></textarea><br>
+      <input type="reset"><br>
+      <input type="button" value="login">
+      <label>Mobile Number</label>
+      <input type="tel" pattern="\+91[0-9]{9}">
+      </fieldset>
+    </forms>
+</body>
+</html>
