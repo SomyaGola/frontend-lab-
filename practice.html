@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .somya{
+        background-color:aqua;
+        color:brown;
+        text-align:right;
+        text-shadow:10px;
+        display:flex;
+
+
+       }
+    </style>
+</head>
+<body>
+  <!--  <div>
+    <h1>University Portal</h1>
+</div>
+
+<div>
+    <a href="#">Home</a><br>
+    <a href="#">Courses</a>
+</div>
+
+<div>
+    <p>Welcome...</p>
+</div>
+<div class="somya">
+    <h1>SOMYA'S PATHETIC LIFE</h1>
+    <p>hi this is somya how are you all doing<br>i just wanted to say that this is anoyingly bad and good both<br>i am going crazy how to make things happen
+    how am i supposed to control things which are going out of my hand i think i want to drop this stupid life choice thati ahve made and want to start fresh 
+or a new this is amking me mad </p>
+<a href="#">my page</a>
+</div>
+<header>
+    <h1>University Portal</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Courses</a>
+</nav>
+
+<main>
+    <p>Welcome...</p>
+</main>-->
+</body>
+</html>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Booking</title>
+
+    <style>
+
+        /* ---------- GENERAL ---------- */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* ---------- NAVIGATION ---------- */
+
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* ---------- MAIN ---------- */
+
+        main {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .movie-section {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px gray;
+            margin-bottom: 30px;
+        }
+
+        .movie-section h2 {
+            text-align: center;
+            color: #222;
+        }
+
+        .movie-image {
+            width: 250px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        /* ---------- FORM ---------- */
+
+        .booking-form {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px gray;
+        }
+
+        .booking-form h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        /* ---------- FACILITIES ---------- */
+
+        .facilities {
+            background-color: white;
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .facilities li {
+            margin: 10px;
+        }
+
+        /* ---------- TABLE ---------- */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #aaa;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #222;
+            color: white;
+        }
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* ---------- RESPONSIVE DESIGN ---------- */
+
+        @media (max-width: 600px) {
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .movie-image {
+                width: 80%;
+            }
+
+            main {
+                width: 95%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <h1>Cineworld</h1>
+        <p>Book your movie tickets online</p>
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Movies</a>
+        <a href="#">Theatres</a>
+        <a href="#">Contact</a>
+        <a href="#">Offers</a>
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+        <!-- MOVIE INFORMATION -->
+
+        <section class="movie-section">
+
+            <h2>Featured Movie</h2>
+
+            <img
+                src="https://via.placeholder.com/300x350"
+                alt="Movie Poster"
+                class="movie-image"
+            >
+
+            <p>
+                Enjoy the latest movies with comfortable seating,
+                great sound quality and an amazing cinema experience.
+            </p>
+
+        </section>
+
+
+        <!-- BOOKING FORM -->
+
+        <section class="booking-form">
+
+            <h2>Book Your Tickets</h2>
+
+            <form>
+
+                <label for="name">Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="movie">Select Movie:</label>
+
+                <select id="movie">
+                    <option>Avengers</option>
+                    <option>Inception</option>
+                    <option>Interstellar</option>
+                    <option>Spider-Man</option>
+                    <option>10 things i hate about you</option>
+                </select>
+
+                <label for="theater">select theater</label>
+                <select id="theater">
+                    <option>pvr</option>
+                    <option>INOX</option>
+                    <option>Cinepolis</option>
+                </select>
+
+
+                <label for="date">Select Date:</label>
+
+                <input
+                    type="date"
+                    id="date"
+                >
+
+
+                <label for="tickets">Number of Tickets:</label>
+
+                <input
+                    type="number"
+                    id="tickets"
+                    min="1"
+                    max="10"
+                >
+
+
+                <label for="phone">contact number</label>
+                <input type="tel" value="+91" maxlength="10">
+
+
+                <button type="submit">
+                   Confirm Booking
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- FACILITIES -->
+
+        <section class="facilities">
+
+            <h2>Facilities Available</h2>
+
+            <ul>
+                <li>Comfortable Seats</li>
+                <li>High Quality Sound</li>
+                <li>Large Screens</li>
+                <li>Food and Beverages</li>
+                <li>Online Booking</li>
+            </ul>
+
+        </section>
+
+
+        <!-- MOVIE TABLE -->
+
+        <section class="movie-section">
+
+            <h2>Available Shows</h2>
+
+            <table>
+
+                <tr>
+                    <th>Movie</th>
+                    <th>Time</th>
+                    <th>Price</th>
+                </tr>
+
+                <tr>
+                    <td>Avengers</td>
+                    <td>10:00 AM</td>
+                    <td>₹200</td>
+                </tr>
+
+                <tr>
+                    <td>Inception</td>
+                    <td>2:00 PM</td>
+                    <td>₹250</td>
+                </tr>
+
+                <tr>
+                    <td>Interstellar</td>
+                    <td>7:00 PM</td>
+                    <td>₹300</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>&copy; 2026 MovieBook. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+```
