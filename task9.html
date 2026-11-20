@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asynchronous Programming</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Server Data Fetching</h2>
+
+    <button onclick="fetchData()">Fetch Data</button>
+
+    <p id="output">Click the button to fetch data.</p>
+
+    <script>
+
+        function fetchData() {
+
+            document.getElementById("output").innerHTML =
+                "Fetching data...";
+
+            // Creating a Promise
+            let serverData = new Promise((resolve, reject) => {
+
+                // Simulating server delay
+                setTimeout(() => {
+
+                    resolve("Data fetched successfully from server!");
+
+                }, 3000);
+
+            });
+
+            // Handling resolved data
+            serverData.then((data) => {
+
+                document.getElementById("output").innerHTML = data;
+
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>
