@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>University Finder</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f5fa;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            background-color: white;
+            width: 80%;
+            max-width: 700px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 12px;
+            width: 60%;
+            margin: 10px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        .university {
+            background-color: #eef2ff;
+            padding: 15px;
+            margin: 12px;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        a {
+            color: blue;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>University Finder</h1>
+
+        <p>Enter a country name to find its universities.</p>
+
+        <input type="text" id="country"
+            placeholder="Enter country name">
+
+        <button onclick="searchUniversity()">
+            Search
+        </button>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script>
+
+        async function searchUniversity() {
+
+            let country = document.getElementById("country").value.trim();
+
+            let result = document.getElementById("result");
+
+            if (country === "") {
+                result.innerHTML = "Please enter a country name.";
+                return;
+            }
+
+            result.innerHTML = "Loading universities...";
+
+            try {
+
+                let response = await fetch(
+                    "https://universities.hipolabs.com/search?country="
+                    + encodeURIComponent(country)
+                );
+
+                if (!response.ok) {
+                    throw new Error("Failed to fetch data");
+                }
+
+                let data = await response.json();
+
+                result.innerHTML = "";
+
+                if (data.length === 0) {
+                    result.innerHTML = "No universities found.";
+                    return;
+                }
+
+                data.forEach(function(university) {
+
+                    let website = university.web_pages || [];
+
+                    result.innerHTML += `
+                        <div class="university">
+
+                            <h3>${university.name}</h3>
+
+                            <p>
+                                <b>Country:</b> ${university.country}
+                            </p>
+
+                            <p>
+                                <b>Website:</b>
+                                ${
+                                    website.length > 0
+                                    ? website.map(url =>
+                                        `<a href="${url}" target="_blank">
+                                        ${url}</a>`
+                                      ).join("<br>")
+                                    : "Website not available"
+                                }
+                            </p>
+
+                        </div>
+                    `;
+
+                });
+
+            }
+
+            catch(error) {
+
+                result.innerHTML =
+                    "Something went wrong. Please try again.";
+
+                console.log(error);
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
+ 
